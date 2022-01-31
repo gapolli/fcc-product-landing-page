@@ -1,0 +1,141 @@
+:root {
+    --color-primary: #13C29F;
+    --color-secondary: #33FFD6;
+    --color-primary-shadow: #06755F;
+    --color-complementary: #C24213;
+    --color-complementary-shadow: #751F00;
+    --color-text: #102A5C;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Comforter', cursive;
+    font-family: var(--font-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+body {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px var(--color-primary-shadow), -2px -2px 5px var(--color-primary-shadow);
+}
+header {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 40px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px var(--color-primary-shadow);
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    margin: 70px 10px 20px 10px;
+    text-align: justify;
+    
+}
+footer {
+    background-color: var(--color-primary);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    box-shadow: -2px -2px 3px var(--color-primary-shadow);
+}
+footer a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+h1, h2, nav a, span a, span p {
+    font-family: var(--font-secondary);
+    color: var(--color-text);
+}
+nav a, span a, span p {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+span p {
+    line-height: normal;
+}
+span a {
+    grid-area: logo;
+}
+span nav {
+    grid-area: menu;
+}
+span img {
+    width: 50px;
+    height: auto;
+}
+span {
+    display: flex;
+    justify-content: space-between;
+}
+div {
+    display: flex;
+    justify-content: space-evenly;
+}
+div span {
+    margin: 10px;
+    box-shadow: 2px 2px 3px var(--color-primary-shadow), -2px -2px 3px var(--color-primary-shadow);
+    border-radius: 10px;
+}
+section span {
+    display: flex;
+    justify-content: start;
+}
+a:hover {
+    text-shadow: 2px 2px 2px var(--color-primary-shadow);
+    color: var(--color-complementary);
+    font-weight: bold;
+}
+input[type=email]:focus-visible {
+    background-color: var(--color-complementary-shadow);
+    color: white;
+    font-weight: bold;
+}
+input[type=submit]:hover {
+    background-color: var(--color-complementary);
+    color: white;
+}
+iframe {
+    width: calc(0.5*95vw);
+    height: calc(0.5*0.75*95vw);
+}
+table {
+    background-color: var(--color-primary);
+    border-collapse: collapse;
+}
+table caption, thead, tfoot {
+    background-color: var(--color-primary-shadow);
+    text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    body {
+        width: 90vw;
+    }
+    main {
+        width: 85vw;
+    }
+    section span {
+        justify-content: center;
+    }
+    span h2 {
+        font-size: 2em;
+    }
+    div span {
+        margin-bottom: 30px;
+    }
+    iframe{
+        width: 85vw;
+        height: 0.75*85vw;
+    }
+}
